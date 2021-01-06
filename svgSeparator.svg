@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+<defs>
+    <linearGradient id="grad1" x1="10%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9C27B0">
+        <animate attributeName="stop-color" values="#D500F9; #AA00FF; #D500F9" dur="4s" repeatCount="indefinite">
+        </animate>
+      </stop>
+      <stop offset="100%" stop-color="#3D5AFE">
+        <animate attributeName="stop-color" values="#3D5AFE; #1976D2; #3D5AFE" dur="4s" repeatCount="indefinite">
+        </animate>
+      </stop>
+    </linearGradient>
+    <linearGradient id="grad2" x1="10%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#616161;stop-opacity:1">
+        <animate attributeName="stop-color" values="#616161; #424242; #616161" dur="8s" repeatCount="indefinite">
+        </animate>
+      </stop>
+      <stop offset="400%" style="stop-color:#212121;stop-opacity:1">
+        <animate attributeName="stop-color" values="#212121; #414141; #212121" dur="8s" repeatCount="indefinite">
+        </animate>
+      </stop>
+    </linearGradient>
+    <filter id="f1" x="0" y="0" width="200%" height="200%">
+      <feOffset result="offOut" in="SourceGraphic" dx="40" dy="20" />
+      <feBlend in="SourceGraphic" in2="offOut" mode="normal" />
+    </filter>
+    <filter id="fBlur" x="0" y="0">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1" />
+    </filter>
+  </defs>
+  <rect x="0" y="00" rx="3" ry="3" width="202" height="6" fill="url(#grad2)" filter="url(#f1)" />
+  <rect x="1" y="1" rx="2" ry="2" width="200" height="4" fill="url(#grad1)"  /> 
+</svg>
